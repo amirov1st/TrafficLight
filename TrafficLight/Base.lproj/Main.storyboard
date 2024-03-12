@@ -27,7 +27,7 @@
                                         <rect key="frame" x="0.0" y="120" width="100" height="100"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyT-dJ-Hrg" userLabel="Green">
+                                    <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyT-dJ-Hrg" userLabel="Green">
                                         <rect key="frame" x="0.0" y="240" width="100" height="100"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     </view>
@@ -38,9 +38,12 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUG-lv-3cr">
-                                <rect key="frame" x="177.66666666666666" y="843.66666666666663" width="75" height="34.333333333333371"/>
+                                <rect key="frame" x="177.33333333333334" y="843.66666666666663" width="75.666666666666657" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="START"/>
+                                <connections>
+                                    <action selector="changeLightButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pgr-DA-5Bv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -52,6 +55,11 @@
                             <constraint firstItem="rUG-lv-3cr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j85-tI-YPz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenView" destination="lyT-dJ-Hrg" id="Yb6-k1-bPv"/>
+                        <outlet property="redView" destination="Y5p-wB-25x" id="3K2-4X-X5r"/>
+                        <outlet property="yellowView" destination="3Bi-1Q-bGM" id="9Zi-WK-eTX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

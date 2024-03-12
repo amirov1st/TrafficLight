@@ -7,13 +7,25 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+final class ViewController: UIViewController {
+    
+    @IBOutlet var redView: UIView!
+    @IBOutlet var yellowView: UIView!
+    @IBOutlet var greenView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        redView.layer.cornerRadius = 50 ; redView.alpha = 0.3 // Вопрос: Правильно ли при помощи ";" разделять 2 значения??
+        yellowView.layer.cornerRadius = 50 ; yellowView.alpha = 0.3
+        greenView.layer.cornerRadius = 50 ; greenView.alpha = 0.3
     }
-
-
+    
+    @IBAction func changeLightButtonDidTapped(_ sender: UIButton) {
+        redView.alpha = 1
+        
+        if redView.alpha == 1 {
+            redView.alpha = 0.3
+            
+        }
+    }
 }
-
